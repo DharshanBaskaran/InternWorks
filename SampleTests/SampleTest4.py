@@ -5,7 +5,7 @@ from time import sleep
 chrome_options = Options()
 
 
-name = "Dhar"
+name = "dharshan"
 
 chrome_options.add_experimental_option("excludeSwitches",["enable-logging"])
 driver = webdriver.Chrome(options=chrome_options)
