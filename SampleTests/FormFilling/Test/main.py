@@ -1,7 +1,5 @@
-#import logging
 from utils.logger import logger
 from selenium.common import WebDriverException
-
 from config import variables
 from pages import FormPage
 from utils import get_driver

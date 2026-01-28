@@ -13,4 +13,4 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("FormFilling")
+logger = logging.getLogger(__name__)
