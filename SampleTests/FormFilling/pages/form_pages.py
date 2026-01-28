@@ -1,4 +1,4 @@
-import logging
+from utils.logger import logger
 from time import sleep
 from selenium.common import WebDriverException
 from locators import FormLocators
@@ -7,13 +7,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    datefmt='%d-%b-%y %H:%M:%S',
-                    handlers=[logging.FileHandler('D:\\Github\\InternWorks\\SampleTests\\FormFilling\\logs\\informations.log',mode='a'),
-                              logging.StreamHandler()],
-)
 
 class FormPage:
     def __init__(self, driver):
@@ -59,7 +52,7 @@ class FormPage:
             parent_link = hirsch_image.find_element(By.XPATH, "./parent::a")
             pdf_url = parent_link.get_attribute("href")
 
-            logging.info("PDF URL:%s",pdf_url)
+            logger.info(f"PDF URL: {pdf_url}")
 
             main_window = self.driver.current_window_handle
             parent_link.click()
@@ -75,7 +68,9 @@ class FormPage:
             print_button = scroll_page.scroll_to_element(self.driver, FormLocators.PRINT_BUTTON)
             self.driver.execute_script("arguments[0].click();", print_button)
         except WebDriverException as driver_exception:
-            logging.error(driver_exception)
+            logger.error(driver_exception)
+            raise
         except Exception as exception:
-            logging.error(exception)
+            logger.error(exception)
+            raise
 

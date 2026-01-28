@@ -1,14 +1,7 @@
-import logging
+from .logger import logger
 from selenium import webdriver
 from selenium.common import WebDriverException
 from selenium.webdriver.chrome.options import Options
-
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    datefmt='%d-%b-%y %H:%M:%S',
-                    handlers=[logging.FileHandler('D:\\Github\\InternWorks\\SampleTests\\FormFilling\\logs\\informations.log',mode='a'),
-                              logging.StreamHandler()],
-)
 
 def get_driver(kiosk_printing=False):
     try:
@@ -21,7 +14,7 @@ def get_driver(kiosk_printing=False):
         driver.maximize_window()
         return driver
     except WebDriverException as driver_exception:
-        logging.error("Error while initializing driver!..", driver_exception)
+        logger.error("Error while initializing driver!..", driver_exception)
     except Exception as exception:
-        logging.error(exception)
+        logger.error(exception)
 

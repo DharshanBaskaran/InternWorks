@@ -1,13 +1,6 @@
-import logging
+from .logger import logger
 from selenium.common import WebDriverException
 from selenium.webdriver.remote.webdriver import WebDriver
-
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    datefmt='%d-%b-%y %H:%M:%S',
-                    handlers=[logging.FileHandler('D:\\Github\\InternWorks\\SampleTests\\FormFilling\\logs\\informations.log',mode='a'),
-                              logging.StreamHandler()],
-)
 
 def scroll_down(driver: WebDriver):
     try:
@@ -19,17 +12,17 @@ def scroll_down(driver: WebDriver):
                 break
             last_height = new_height
     except WebDriverException as driver_exception:
-        logging.error("Error while scrolling!",driver_exception)
+        logger.error("Error while scrolling!",driver_exception)
     except Exception as exception:
-        logging.error(exception)
+        logger.error(exception)
 
 def scroll_up(driver: WebDriver):
     try:
         driver.execute_script("window.scrollTo(0, 0);")
     except WebDriverException as driver_exception:
-        logging.error("Error while scrolling up!",driver_exception)
+        logger.error("Error while scrolling up!",driver_exception)
     except Exception as exception:
-        logging.error(exception)
+        logger.error(exception)
 
 def scroll_to_element(driver: WebDriver, locator):
     try:
@@ -39,6 +32,6 @@ def scroll_to_element(driver: WebDriver, locator):
         )
         return element
     except WebDriverException as driver_exception:
-        logging.error("Error while scrolling to element!",driver_exception)
+        logger.error("Error while scrolling to element!",driver_exception)
     except Exception as exception:
-        logging.error(exception)
+        logger.error(exception)
