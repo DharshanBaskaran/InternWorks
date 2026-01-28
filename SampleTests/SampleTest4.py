@@ -1,22 +1,20 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+import variables
 from time import sleep
 chrome_options = Options()
-
-
-name = "dharshan"
 
 chrome_options.add_experimental_option("excludeSwitches",["enable-logging"])
 driver = webdriver.Chrome(options=chrome_options)
 driver.get("https://hirschqa.azurewebsites.net/training/")
-driver.find_element(By.ID,"Name").send_keys(name)
+driver.find_element(By.ID,"Name").send_keys(variables.name)
 sleep(2)
-driver.find_element(By.ID,"email").send_keys("dharshansb9524@gmail.com")
+driver.find_element(By.ID,"email").send_keys(variables.email)
 sleep(2)
-driver.find_element(By.ID,"phone").send_keys("9092666206")
+driver.find_element(By.ID,"phone").send_keys(variables.phone)
 sleep(2)
-driver.find_element(By.ID,"dob").send_keys("09-05-2004")
+driver.find_element(By.ID,"dob").send_keys(variables.dob)
 sleep(2)
 driver.find_element(By.NAME,"gender").click()
 sleep(2)

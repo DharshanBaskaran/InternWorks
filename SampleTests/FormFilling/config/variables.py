@@ -1,0 +1,7 @@
+name = "Dharshan  S B"
+email = "dharshansb9524@gmail.com"
+phone = "9092666206"
+dob = "09-05-2004"
+state = "Tamil Nadu"
+institution = "Thiagarajar College"
+percentage = "88.3"

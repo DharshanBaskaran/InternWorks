@@ -1,0 +1,5 @@
+name = "dharshan"
+email = "dharshansb9524@gmail.com"
+phone = "9092666206"
+dob = "09-05-2004"
+stateName = "TamilNadu"
