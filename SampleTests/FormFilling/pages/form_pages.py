@@ -23,6 +23,7 @@ class FormPage:
             self.wait.until(EC.visibility_of_element_located(FormLocators.STATE)).send_keys(data.state)
             sleep(3)
             scroll_page.scroll_down(self.driver)
+            #data for institutional and percentage passed in below code
             rows = self.driver.find_elements(
                 By.XPATH, "//table//tbody//tr"
             )
