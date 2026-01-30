@@ -1,0 +1,12 @@
+
+#ignored files
+.DS_Store
+.idea
+.vs
+__pycache__
+*.bak
+*.pyc
+*.log
+*.bak
+*.dat
+*.ini
