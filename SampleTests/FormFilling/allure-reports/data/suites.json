@@ -1,1 +1,1 @@
-{"uid":"98d3104e051c652961429bf95fa0b5d6","name":"suites","children":[{"name":"user fills the form and successfully submits","uid":"f8e8cb15c666d8c2","parentUid":"98d3104e051c652961429bf95fa0b5d6","status":"passed","time":{"start":1769762901267,"stop":1769762928776,"duration":27509},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":1,"retriesStatusChange":false,"parameters":[],"tags":[]}]}
+{"uid":"98d3104e051c652961429bf95fa0b5d6","name":"suites","children":[]}
