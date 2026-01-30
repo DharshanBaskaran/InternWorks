@@ -2,7 +2,7 @@ from behave import given,when,then
 from pages import FormPage
 from config import variables
 
-@given("user launches training form successfully")
+@given("user launches the training form successfully")
 def step_launch_application(context):
     context.driver.get("https://hirschqa.azurewebsites.net/training/")
     context.form_page = FormPage(context.driver)

@@ -1,5 +1,5 @@
 Feature: Training form submission
-    scenario : user fills the form and successfully submits
+    Scenario: user fills the form and successfully submits
         Given user launches the training form successfully
         When user fills all required details
         And user views the pdf
