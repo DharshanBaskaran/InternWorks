@@ -6,7 +6,7 @@ def before_all(context):
     logger.info("Test Execution Starts!!..")
     context.driver = get_driver(kiosk_printing=True)
 
-def before_feature(context, feature):
+def before_feature(feature):
     logger.info(f"feature starts: {feature.name}")
     allure.dynamic.feature(feature.name)
 
@@ -38,8 +38,8 @@ def after_scenario(context, scenario):
         context.driver.quit()
         logger.info("Browser Closed")
 
-def after_feature(context, feature):
+def after_feature(feature):
     logger.info(f"feature ends: {feature.name}")
 
-def after_all(context):
+def after_all():
     logger.info("All tests Completed!!!")
