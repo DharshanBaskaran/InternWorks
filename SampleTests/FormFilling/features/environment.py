@@ -4,7 +4,6 @@ from utils.logger import logger
 
 def before_all(context):
     logger.info("Test Execution Starts!!..")
-    context.driver = get_driver(kiosk_printing=True)
 
 def before_feature(context,feature):
     logger.info(f"feature starts: {feature.name}")
